@@ -3,7 +3,7 @@
 import logging
 import sys
 
-from qtpy import QT_VERSION
+from PySide2 import QT_VERSION
 
 
 __appname__ = "labelme"

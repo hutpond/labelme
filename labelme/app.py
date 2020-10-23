@@ -8,10 +8,10 @@ import re
 import webbrowser
 
 import imgviz
-from qtpy import QtCore
-from qtpy.QtCore import Qt
-from qtpy import QtGui
-from qtpy import QtWidgets
+from PySide2 import QtCore
+from PySide2.QtCore import Qt
+from PySide2 import QtGui
+from PySide2 import QtWidgets
 
 from labelme import __appname__
 from labelme import PY2

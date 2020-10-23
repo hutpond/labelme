@@ -1,5 +1,5 @@
-from qtpy.QtCore import Qt
-from qtpy import QtWidgets
+from PySide2.QtCore import Qt
+from PySide2 import QtWidgets
 
 
 class EscapableQListWidget(QtWidgets.QListWidget):

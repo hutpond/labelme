@@ -6,8 +6,8 @@ import os.path as osp
 import sys
 import yaml
 
-from qtpy import QtCore
-from qtpy import QtWidgets
+from PySide2 import QtCore
+from PySide2 import QtWidgets
 
 from labelme import __appname__
 from labelme import __version__

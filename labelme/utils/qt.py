@@ -3,9 +3,9 @@ import os.path as osp
 
 import numpy as np
 
-from qtpy import QtCore
-from qtpy import QtGui
-from qtpy import QtWidgets
+from PySide2 import QtCore
+from PySide2 import QtGui
+from PySide2 import QtWidgets
 
 
 here = osp.dirname(osp.abspath(__file__))

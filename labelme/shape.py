@@ -1,8 +1,8 @@
 import copy
 import math
 
-from qtpy import QtCore
-from qtpy import QtGui
+from PySide2 import QtCore
+from PySide2 import QtGui
 
 import labelme.utils
 

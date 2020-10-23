@@ -1,8 +1,8 @@
 import PIL.Image
 import PIL.ImageEnhance
-from qtpy.QtCore import Qt
-from qtpy import QtGui
-from qtpy import QtWidgets
+from PySide2.QtCore import Qt
+from PySide2 import QtGui
+from PySide2 import QtWidgets
 
 from .. import utils
 
