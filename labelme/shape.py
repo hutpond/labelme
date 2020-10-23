@@ -4,7 +4,7 @@ import math
 from PySide2 import QtCore
 from PySide2 import QtGui
 
-import labelme.utils
+from . import utils
 
 
 # TODO(unknown):

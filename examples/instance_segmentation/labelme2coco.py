@@ -10,7 +10,7 @@ import os.path as osp
 import sys
 import uuid
 
-import imgviz
+# import imgviz
 import numpy as np
 
 import labelme

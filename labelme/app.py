@@ -7,30 +7,29 @@ import os.path as osp
 import re
 import webbrowser
 
-import imgviz
 from PySide2 import QtCore
 from PySide2.QtCore import Qt
 from PySide2 import QtGui
 from PySide2 import QtWidgets
 
 from labelme import __appname__
-from labelme import PY2
-from labelme import QT5
+from . import PY2
+from . import QT5
 
 from . import utils
-from labelme.config import get_config
-from labelme.label_file import LabelFile
-from labelme.label_file import LabelFileError
-from labelme.logger import logger
-from labelme.shape import Shape
-from labelme.widgets import BrightnessContrastDialog
-from labelme.widgets import Canvas
-from labelme.widgets import LabelDialog
-from labelme.widgets import LabelListWidget
-from labelme.widgets import LabelListWidgetItem
-from labelme.widgets import ToolBar
-from labelme.widgets import UniqueLabelQListWidget
-from labelme.widgets import ZoomWidget
+from .config import get_config
+from .label_file import LabelFile
+from .label_file import LabelFileError
+from .logger import logger
+from .shape import Shape
+from .widgets import BrightnessContrastDialog
+from .widgets import Canvas
+from .widgets import LabelDialog
+from .widgets import LabelListWidget
+from .widgets import LabelListWidgetItem
+from .widgets import ToolBar
+from .widgets import UniqueLabelQListWidget
+from .widgets import ZoomWidget
 
 
 # FIXME
@@ -41,9 +40,6 @@ from labelme.widgets import ZoomWidget
 # - [high] Deselect shape when clicking and already selected(?)
 # - [low,maybe] Preview images on file dialogs.
 # - Zoom is too "steppy".
-
-
-LABEL_COLORMAP = imgviz.label_colormap(value=200)
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -1135,6 +1131,9 @@ class MainWindow(QtWidgets.QMainWindow):
             item = self.uniqLabelList.findItemsByLabel(label)[0]
             label_id = self.uniqLabelList.indexFromItem(item).row() + 1
             label_id += self._config["shift_auto_shape_color"]
+
+            import imgviz
+            LABEL_COLORMAP = imgviz.label_colormap(value=200)
             return LABEL_COLORMAP[label_id % len(LABEL_COLORMAP)]
         elif (
             self._config["shape_color"] == "manual"

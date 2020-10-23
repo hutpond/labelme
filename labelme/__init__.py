@@ -3,7 +3,9 @@
 import logging
 import sys
 
-from PySide2 import QT_VERSION
+from PySide2 import QtCore
+
+QT_VERSION = QtCore.__version__
 
 
 __appname__ = "labelme"

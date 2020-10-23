@@ -3,7 +3,7 @@
 import argparse
 import sys
 
-import imgviz
+# import imgviz
 import matplotlib.pyplot as plt
 
 from labelme.label_file import LabelFile

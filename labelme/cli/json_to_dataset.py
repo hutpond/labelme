@@ -4,7 +4,7 @@ import json
 import os
 import os.path as osp
 
-import imgviz
+# import imgviz
 import PIL.Image
 
 from labelme.logger import logger

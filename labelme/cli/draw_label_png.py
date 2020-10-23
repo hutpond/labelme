@@ -1,6 +1,6 @@
 import argparse
 
-import imgviz
+# import imgviz
 import matplotlib.pyplot as plt
 import numpy as np
 import PIL.Image

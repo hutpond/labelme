@@ -1,6 +1,5 @@
 import re
 
-from PySide2 import QT_VERSION
 from PySide2 import QtCore
 from PySide2 import QtGui
 from PySide2 import QtWidgets
@@ -9,6 +8,7 @@ from labelme.logger import logger
 import labelme.utils
 
 
+QT_VERSION = QtCore.__version__
 QT5 = QT_VERSION[0] == "5"
 
 

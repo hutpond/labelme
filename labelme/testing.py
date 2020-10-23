@@ -1,8 +1,8 @@
 import json
 import os.path as osp
 
-import imgviz
-import labelme.utils
+# import imgviz
+from . import utils
 
 
 def assert_labelfile_sanity(filename):
