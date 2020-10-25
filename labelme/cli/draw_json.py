@@ -36,6 +36,8 @@ def main():
     label_names = [None] * (max(label_name_to_value.values()) + 1)
     for name, value in label_name_to_value.items():
         label_names[value] = name
+
+    import imgviz
     lbl_viz = imgviz.label2rgb(
         label=lbl,
         img=imgviz.asgray(img),

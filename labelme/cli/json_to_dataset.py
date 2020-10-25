@@ -62,6 +62,7 @@ def main():
     for name, value in label_name_to_value.items():
         label_names[value] = name
 
+    import imgviz
     lbl_viz = imgviz.label2rgb(
         label=lbl, img=imgviz.asgray(img), label_names=label_names, loc="rb"
     )

@@ -20,6 +20,7 @@ def main():
     logger.info("label shape: {}".format(lbl.shape))
     logger.info("unique label values: {}".format(np.unique(lbl)))
 
+    import imgviz
     lbl_viz = imgviz.label2rgb(lbl)
     plt.imshow(lbl_viz)
     plt.show()

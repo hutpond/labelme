@@ -41,6 +41,7 @@ def main():
         os.makedirs(osp.join(args.output_dir, "AnnotationsVisualization"))
     print("Creating dataset:", args.output_dir)
 
+    import imgviz
     class_names = []
     class_name_to_id = {}
     for i, line in enumerate(open(args.labels).readlines()):

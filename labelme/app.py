@@ -1127,12 +1127,12 @@ class MainWindow(QtWidgets.QMainWindow):
         shape.select_fill_color = QtGui.QColor(r, g, b, 155)
 
     def _get_rgb_by_label(self, label):
+        import imgviz
         if self._config["shape_color"] == "auto":
             item = self.uniqLabelList.findItemsByLabel(label)[0]
             label_id = self.uniqLabelList.indexFromItem(item).row() + 1
             label_id += self._config["shift_auto_shape_color"]
 
-            import imgviz
             LABEL_COLORMAP = imgviz.label_colormap(value=200)
             return LABEL_COLORMAP[label_id % len(LABEL_COLORMAP)]
         elif (

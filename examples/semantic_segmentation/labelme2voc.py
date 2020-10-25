@@ -91,6 +91,7 @@ def main():
 
         np.save(out_lbl_file, lbl)
 
+        import imgviz
         if not args.noviz:
             viz = imgviz.label2rgb(
                 label=lbl,
